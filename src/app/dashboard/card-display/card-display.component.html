@@ -1,0 +1,9 @@
+<div class="card-display">
+    <mat-card *ngFor="let card of data" class="example-card">
+        <img mat-card-image src={{card.imageUrl}} alt={{card.alt}}>
+        <h4>{{card.header}}</h4>
+        <mat-card-content>
+          <p>{{card.content}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

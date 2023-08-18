@@ -1,0 +1,1 @@
+export const displayedColumns: string[] = ['id', 'email', 'firstName', 'lastName'];
