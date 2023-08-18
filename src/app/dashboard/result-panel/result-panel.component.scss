@@ -1,17 +1,22 @@
+$mediumMargin: 10px;
+$smallPadding: 5px;
+$smallMargin: 5px;
+
 .phase-result-card{
-    margin-left: 10px;
+    margin-left: $mediumMargin;
 }
 
 .mat-mdc-card-content {
-    margin-bottom: 5px;
+    margin-bottom: $smallMargin;
 }
 
 .mat-mdc-card-title {
-    padding: 5px;
+    padding: $smallPadding;
+    margin-bottom: $mediumMargin;
 }
 
 .gradient-card {
-    margin-left: 10px;
+    margin-left: $mediumMargin;
     background: linear-gradient(to bottom, rgb(155 244 54 / 72%), rgba(244, 67, 54, 0.87));
     .mat-mdc-card-content {
         display: flex;
@@ -21,6 +26,24 @@
 }
 
 .mat-mdc-form-field {
-    margin: 10px;
+    margin: $mediumMargin;
     width: 100%;
+}
+
+.finger-print-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.fingerprint-icon {
+    background: yellow;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }

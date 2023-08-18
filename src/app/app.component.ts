@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { appRoutes } from './common/routes';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sw-dashboard';
+  title = 'Small World';
+  routes = appRoutes;
 }

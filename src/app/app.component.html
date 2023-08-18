@@ -1,11 +1,12 @@
-<mat-toolbar>
-    <span>Small World</span>
+<mat-toolbar class="header">
+    <span>{{title}}</span>
 </mat-toolbar>
-<mat-drawer-container class="example-container">
+<mat-drawer-container class="container">
     <mat-drawer mode="side" opened>
-        <a mat-list-item routerLink="">Home</a>
-        <a mat-list-item routerLink="/dashboard">Dashboard</a>
-        <a mat-list-item routerLink="/services">Services</a>
+        <div class="nav-item" mat-list-item *ngFor="let route of routes">
+            <mat-icon>{{route.icon}}</mat-icon>
+            <a routerLink={{route.path}}>{{route.name}}</a>
+        </div>
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet>

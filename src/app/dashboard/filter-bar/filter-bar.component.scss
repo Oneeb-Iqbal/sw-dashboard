@@ -1,3 +1,4 @@
+$matFormFieldMargin: 10px;
 .filter-bar {
     display: flex;
     flex-direction: row;
@@ -5,5 +6,5 @@
 }
 
 .mat-mdc-form-field {
-    margin: 10px;
+    margin: $matFormFieldMargin;
 }

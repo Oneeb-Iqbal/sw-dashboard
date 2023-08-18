@@ -5,3 +5,9 @@ export interface User {
     last_name: string;
     avatar: string;
 }
+
+export interface AppRoutes {
+    path: string;
+    name: string;
+    icon: string;
+}

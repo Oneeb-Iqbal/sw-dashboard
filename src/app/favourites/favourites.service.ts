@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DashboardService {
+export class FavouritesService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(page: number, perPage: number): Observable<any> {
+  getFavouriteUsers(page: number, perPage: number): Observable<any> {
     const url = `${environment.apiBaseUrl}/users`;
     const params = new HttpParams()
       .set('page', page.toString())

@@ -1,1 +1,1 @@
-export const displayedColumns: string[] = ['id', 'email', 'firstName', 'lastName'];
+export const displayedColumns: string[] = ['id', 'email', 'firstName', 'lastName', 'avatar'];

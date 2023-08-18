@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,8 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { RouterModule, Routes } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -23,6 +23,20 @@ const routes: Routes = [
     loadChildren: () =>
       import('./dashboard/dashboard.module').then(
         (m) => m.DashboardModule
+      ),
+  },
+  {
+    path: 'favourites',
+    loadChildren: () =>
+      import('./favourites/favourites.module').then(
+        (m) => m.FavouritesModule
+      ),
+  },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./profile/profile.module').then(
+        (m) => m.ProfileModule
       ),
   },
   {
@@ -42,9 +56,9 @@ const routes: Routes = [
     NoopAnimationsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    DashboardModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatIconModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],

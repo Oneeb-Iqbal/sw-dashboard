@@ -1,10 +1,41 @@
+$xLargeMargin: 60px;
+$smallMargin: 5px;
+$smallPadding: 6px;
+
 ::ng-deep .mat-drawer-inner-container {
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start;
     align-items: center;
      a{
-        margin-bottom: 5px;
+        margin-bottom: $smallMargin;
         text-decoration: none;
      }
+}
+
+::ng-deep .mat-drawer.mat-drawer-side {
+   transform: none;
+   position: fixed;
+   margin-top: $xLargeMargin;
+}
+
+.nav-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: $smallMargin;
+   padding: $smallPadding;
+}
+
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #fff;
+   z-index: 1000;
+}
+
+.container {
+   margin-top: $xLargeMargin;
 }
