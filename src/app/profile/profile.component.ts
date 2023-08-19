@@ -23,7 +23,6 @@ export class ProfileComponent {
   ngOnInit() {
     this.profileService.getUser(2).subscribe((res) => {
       this.userData = res.data;
-      debugger;
     })
   }
 }
